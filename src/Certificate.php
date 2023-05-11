@@ -45,7 +45,7 @@ class Certificate
             $pdf->Cell(0, 10, strtoupper($userName), 0, 1, 'C');
 
             // Establecer la posición del cursor en el centro del documento
-            $pdf->SetXY(227, 150);
+            $pdf->SetXY(245, 180);
             // Escribir el texto centrado
             $pdf->SetFont('helvetica', '', 12);
             $pdf->Cell(30, 10, strtoupper($serie . $to), 0, 1, 'R');

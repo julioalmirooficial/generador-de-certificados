@@ -70,10 +70,9 @@ generate.addEventListener("click", (e) => {
   })
     .then((res) => res.json())
     .then((response) => {
-      console.log(response);
       if (response.message.includes('Hemos generado')) {
         document.getElementById("msg").innerHTML = msg(
-          "Hemos generado 2 Certificados",
+          response.message,
           "alert alert-success"
         );
       } else {

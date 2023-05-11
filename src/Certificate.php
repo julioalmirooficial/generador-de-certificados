@@ -41,7 +41,7 @@ class Certificate
             // Establecer la posición del cursor en el centro del documento
             $pdf->SetXY($x, $y);
             // Escribir el texto centrado
-            // $pdf->SetFont(TIPO DE FUENTE, GROSOR FUENTE, TAMAÑO DE FUENTE);
+            //! $pdf->SetFont(TIPO DE FUENTE, GROSOR FUENTE, TAMAÑO DE FUENTE);
             $pdf->SetFont('helvetica', 'XB', 26);
             $pdf->Cell(0, 10, strtoupper($userName), 0, 1, 'C');
 
@@ -62,7 +62,7 @@ class Certificate
             header('Content-Type: application/pdf');
             header('Content-Length: ' . filesize($filename));
         } catch (Exception $e) {
-            return 0;
+            echo json_encode(["error" => "Error "]);
         }
     }
 }
